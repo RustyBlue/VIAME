@@ -20,6 +20,7 @@ ExternalProject_Add(vibrant
     ${VIAME_ARGS_COMMON}
     ${VIAME_ARGS_fletch}
 
+    -DBUILD_SHARED_LIBS:BOOL=ON
     -DBUILD_TESTING:BOOL=OFF
     -DVIDTK_BUILD_TESTS:BOOL=OFF
 
@@ -47,4 +48,5 @@ ExternalProject_Add_Step(vibrant forcebuild
 
 set(VIAME_ARGS_vibrant
   -Dvibrant_DIR:PATH=${VIAME_BUILD_PREFIX}/src/vibrant-build
+  -Dvidtk_DIR:PATH=${VIAME_BUILD_PREFIX}/src/vibrant-build
   )
